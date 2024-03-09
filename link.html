@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="shortcut icon" href="assets/img/favicon3.jpg" type="image/x-icon">
+<title>Preguntas Frecuentes</title>
+<style>
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #ba7703);
+  }
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .faq {
+    margin-bottom: 20px;
+  }
+  .question {
+    cursor: pointer;
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+  .answer {
+    display: none;
+    padding: 10px;
+    background-color: #e9e9e9;
+    border-radius: 5px;
+  }
+ .footer__copy{
+   font-size: var(--smaller-font-size);
+   color: var(--text-color-light);
+   text-align: center;
+ }
+
+  
+  @media screen and (max-width: 600px) {
+    .container {
+      padding: 10px;
+    }
+    h1 {
+      font-size: 24px;
+    }
+    .question, .answer {
+      padding: 8px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h1>Preguntas Frecuentes</h1>
+
+  <div class="faq">
+    <div class="question">¿Cuál es el tiempo de entrega?</div>
+    <div class="answer">El tiempo de entrega varía según la ubicación, pero normalmente es de 3 a 5 días hábiles.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">¿Puedo cancelar mi pedido?</div>
+    <div class="answer">Sí, puedes cancelar tu pedido dentro de las primeras 24 horas después de realizarlo.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">¿Qué métodos de pago aceptan?</div>
+    <div class="answer">Aceptamos tarjetas de crédito, débito y PayPal como métodos de pago.</div>
+  </div>
+
+  <div class="faq">
+    <div class="question">¿Ofrecen devoluciones?</div>
+    <div class="answer">Sí, ofrecemos devoluciones dentro de los 30 días posteriores a la compra. Por favor, consulta nuestra política de devoluciones para más detalles.</div>
+  </div>
+  <footer>
+    <span class="footer__copy">
+        &#169; Copyright Samglotss. All right reserved 2024.
+    </span>
+</footer>
+
+</div>
+
+<script>
+
+  const questions = document.querySelectorAll('.question');
+  questions.forEach(question => {
+    question.addEventListener('click', () => {
+      question.classList.toggle('active');
+      const answer = question.nextElementSibling;
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        answer.style.display = 'block';
+      }
+    });
+  });
+</script>
+</body>
+</html>
